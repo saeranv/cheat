@@ -1,0 +1,105 @@
+#cheatsheet for command line...made with command line 
+
+//PYP
+dir | pyp "print('%s %s' % (i, x.upper()))"
+
+//ADDING MODULE TO PATH
+import sys
+sys.path.append("..")
+from myapp import SomeObject
+
+//PYTHON TRICKS https://www.quora.com/What-are-some-cool-Python-tricks
+- import this //zen of python 
+- zip(*L) = transpose a matrix
+- USE PICKLE FOR readDOE?
+//SimpleHTTPServer
+- python -m SimpleHTTPServer
+- http://localhost #to see your directory as server
+- ipconfig to find your ip address and send to 
+- ipaddress:8000 (localhost:8000) friend can access on his computer
+>ctrl z + enter \\exit python from cmd line
+
+//WOLFRAMALPHA
+y = 2^x, y=x^2,  x = -20 to 20
+
+//PIP
+pip freeze //search exiting
+pip search <<python module>>
+pip install <<python module>>
+
+//MOVE FILE
+move Z:\directory\*.* c:\newdirectory
+
+//MAKE/DELETE DIR/FILE
+- md <dirname> //make dir
+- echo some-text >> <filename> //make file
+- del /f <filename> //delete file
+- rmdir [Drive:]Path [/s] # /s is for subdirectories
+
+//SEARCH
+dir /s /p directory_name /AD
+/b no header information (bare)
+/s searches subdirectors w/i directory
+/p pauses after each screenful of information
+/AD = specifiied attributes = directors
+/AH = sepcfied attributes: hidden files
+findstr 'text' <<filename>> // to find string
+
+//MOD PROCESS
+- ctrl C //kill process
+- |more pauses after screenful of information
+- more <filenmae> // like type but can scroll page at time
+
+
+//HELP
+dir /?
+type /?
+start . //open folder from terminal
+
+//stream text from file
+type <filename>
+type |clip  (to clipboard)
+
+//GIT 
+git clone <link from repo>
+git checkout -- . //discard unstaged changes. Make sure to include period.
+
+//SEARCH
+dir /b/s filename
+i.e dir /b/s git.exe
+dir /b/s git.*
+dir /b/s *.exe
+
+//EXPORT TO FILE
+dir /b/s git.* >> filelist.txt
+dir /b/s git.* |clip //sooooo useful!
+
+
+//tab throuhg windows
+alt-tab
+
+//create shortcust
+right-click, properties - add shortcut
+notepad = alt ctrl Q
+atom = alt ctrl A
+cmd = alt ctrl W
+
+//NAME SPACES
+- a python module is your source file
+- if you run in cmd prompt:
+- 
+if __name__ == "__main__":// 
+    - python readDOE.py
+then python will name source file's __name__ to "__main__"
+HOWEVER, if you are importing that source file
+   - from readDOE import readDOEClass
+then python interpreter sets __name__ as __readDOE__ (or something)
+- therefore you can run .py separetly, or as module without mixing up functions
+
+//BASIC CMD
+Up arrow repeast command
+cls \\ clear terminal workspace
+
+
+go to dir; git init; git add . ; git commit -m "init"; git commit -m "hi" 
+git rmeote add origin "remote repo url" 
