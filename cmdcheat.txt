@@ -101,5 +101,10 @@ Up arrow repeast command
 cls \\ clear terminal workspace
 
 
+//ADD DIR TO GIT
 go to dir; git init; git add . ; git commit -m "init"; git commit -m "hi" 
 git rmeote add origin "remote repo url" 
+
+
+"//COPY PATH CMDLINE" 
+echo %cd% | clip
