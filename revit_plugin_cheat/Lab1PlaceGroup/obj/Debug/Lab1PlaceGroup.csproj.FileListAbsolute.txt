@@ -1,0 +1,6 @@
+C:\Users\631\Documents\GitHub\temprevitplugin\Lab1PlaceGroup\Lab1PlaceGroup\bin\Debug\Lab1PlaceGroup.dll
+C:\Users\631\Documents\GitHub\temprevitplugin\Lab1PlaceGroup\Lab1PlaceGroup\bin\Debug\Lab1PlaceGroup.pdb
+C:\Users\631\Documents\GitHub\temprevitplugin\Lab1PlaceGroup\Lab1PlaceGroup\obj\Debug\Lab1PlaceGroup.csprojResolveAssemblyReference.cache
+C:\Users\631\Documents\GitHub\temprevitplugin\Lab1PlaceGroup\Lab1PlaceGroup\obj\Debug\Lab1PlaceGroup.csproj.CoreCompileInputs.cache
+C:\Users\631\Documents\GitHub\temprevitplugin\Lab1PlaceGroup\Lab1PlaceGroup\obj\Debug\Lab1PlaceGroup.dll
+C:\Users\631\Documents\GitHub\temprevitplugin\Lab1PlaceGroup\Lab1PlaceGroup\obj\Debug\Lab1PlaceGroup.pdb
