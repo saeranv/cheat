@@ -73,19 +73,31 @@ public class Lab1PlaceGroup : IExternalCommand
         ref string message,
         // Param 3: Autodesk.Revit.DB.ElementSet, choose elements to be highlighted on screen
         ElementSet elements)
-    {
+    {   
         //Get application and document objects
         UIApplication uiApp = commandData.Application; // access application UI, variable type is UIApplication obj
         Document doc = uiApp.ActiveUIDocument.Document; // This is the revit database stored in doc
 
+        string debug = "hello world";
+
+        //Console.Write(debug);
+        System.Diagnostics.Debug.Print(debug);
+
+        TaskDialog.Show("helworld!", debug);
 
         //Define a Reference object to accept the pick result
         // Reference == class containing elements from a Revit model associated with valid geometry.
-        Reference pickedRef = null; // 
+        Reference pickedRef = null; //  
 
         //Pick a group
         Selection sel = uiApp.ActiveUIDocument.Selection; //retrieve the selected elements
-        pickedRef = sel.PickObject(ObjectType.Element, "Please select a group!"); // User prompt
+
+        //pickedRef = sel.PickObject(ObjectType.Element, "Please select a group!"); // User prompt
+        GroupFilter selFilter = new GroupFilter(); // define new obj of GroupPickFilter
+        pickedRef = sel.PickObject(ObjectType.Element, selFilter, "Please Seelect a group...");
+
+
+
         Element elem = doc.GetElement(pickedRef); //store it as a element
         Group group = elem as Group; // cast the element as a group
 
@@ -104,4 +116,23 @@ public class Lab1PlaceGroup : IExternalCommand
         return Result.Succeeded;
     }
 }
+
+// Filteres selection of elements(?) to model "groups". ONly model
+// groups are highlighted and can be selected by cursor
+public class GroupFilter : ISelectionFilter
+{   
+    // Returns boolean of Model Group, for input element e
+    public bool AllowElement(Element e)
+    {
+        bool IsModelGroup = (e.Category.Id.IntegerValue.Equals((int)BuiltInCategory.OST_IOSModelGroups));
+        return IsModelGroup;
+    }   
+
+    //Reference to geometry and coordinate point
+    public bool AllowReference(Reference r, XYZ p)
+    {
+        return false;
+    }
+}
+
 

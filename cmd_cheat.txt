@@ -63,6 +63,20 @@ type |clip  (to clipboard)
 //GIT 
 git clone <link from repo>
 git checkout -- . //discard unstaged changes. Make sure to include period.
+//check all your branches
+git branch
+//create new branch on local machine and switch to it
+git checkout -b [branch_name]
+//change working branch
+git checkout [name of your branch]
+//push the branch
+git push origin [name of your new branch]
+
+//ADD DIR TO GIT
+go to dir; git init; git add . ; git commit -m "init"; git commit -m "hi" 
+git rmeote add origin "remote repo url" 
+
+
 
 //SEARCH
 dir /b/s filename
@@ -99,12 +113,6 @@ then python interpreter sets __name__ as __readDOE__ (or something)
 //BASIC CMD
 Up arrow repeast command
 cls \\ clear terminal workspace
-
-
-//ADD DIR TO GIT
-go to dir; git init; git add . ; git commit -m "init"; git commit -m "hi" 
-git rmeote add origin "remote repo url" 
-
 
 "//COPY PATH CMDLINE" 
 echo %cd% | clip
