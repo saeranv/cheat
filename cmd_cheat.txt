@@ -1,4 +1,4 @@
-#cheatsheet for command line...made with command line 
+#cheatsheet for command line...made with command line
 
 //PYP
 dir | pyp "print('%s %s' % (i, x.upper()))"
@@ -9,13 +9,13 @@ sys.path.append("..")
 from myapp import SomeObject
 
 //PYTHON TRICKS https://www.quora.com/What-are-some-cool-Python-tricks
-- import this //zen of python 
+- import this //zen of python
 - zip(*L) = transpose a matrix
 - USE PICKLE FOR readDOE?
 //SimpleHTTPServer
 - python -m SimpleHTTPServer
 - http://localhost #to see your directory as server
-- ipconfig to find your ip address and send to 
+- ipconfig to find your ip address and send to
 - ipaddress:8000 (localhost:8000) friend can access on his computer
 >ctrl z + enter \\exit python from cmd line
 
@@ -60,7 +60,7 @@ start . //open folder from terminal
 type <filename>
 type |clip  (to clipboard)
 
-//GIT 
+//GIT
 git clone <link from repo>
 git checkout -- . //discard unstaged changes. Make sure to include period.
 //check all your branches
@@ -73,8 +73,8 @@ git checkout [name of your branch]
 git push origin [name of your new branch]
 
 //ADD DIR TO GIT
-go to dir; git init; git add . ; git commit -m "init"; git commit -m "hi" 
-git rmeote add origin "remote repo url" 
+go to dir; git init; git add . ; git commit -m "init"; git commit -m "hi"
+git rmeote add origin "remote repo url"
 
 
 
@@ -101,8 +101,8 @@ cmd = alt ctrl W
 //NAME SPACES
 - a python module is your source file
 - if you run in cmd prompt:
-- 
-if __name__ == "__main__":// 
+-
+if __name__ == "__main__"://
     - python readDOE.py
 then python will name source file's __name__ to "__main__"
 HOWEVER, if you are importing that source file
@@ -114,6 +114,10 @@ then python interpreter sets __name__ as __readDOE__ (or something)
 Up arrow repeast command
 cls \\ clear terminal workspace
 
-"//COPY PATH CMDLINE" 
+//ADD DIR TO GIT
+go to dir; git init; git add . ; git commit -m "init"; git commit -m "hi"
+git remote add origin "remote repo url"
+
 echo %cd% | clip
-\n 
+//ADD PYTHON TO PATH
+set PATH=%PATH%;C:\Users\631\AppData\Local\Continuum\anaconda2\pkgs\python-2.7.13-hb034564_12\
