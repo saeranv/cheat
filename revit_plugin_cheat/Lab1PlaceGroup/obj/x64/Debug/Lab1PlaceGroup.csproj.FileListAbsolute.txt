@@ -1,5 +1,0 @@
-C:\Users\631\Documents\GitHub\cmdcheat\revit_plugin_cheat\Lab1PlaceGroup\bin\x64\Debug\Lab1PlaceGroup.dll
-C:\Users\631\Documents\GitHub\cmdcheat\revit_plugin_cheat\Lab1PlaceGroup\bin\x64\Debug\Lab1PlaceGroup.pdb
-C:\Users\631\Documents\GitHub\cmdcheat\revit_plugin_cheat\Lab1PlaceGroup\obj\x64\Debug\Lab1PlaceGroup.csproj.CoreCompileInputs.cache
-C:\Users\631\Documents\GitHub\cmdcheat\revit_plugin_cheat\Lab1PlaceGroup\obj\x64\Debug\Lab1PlaceGroup.dll
-C:\Users\631\Documents\GitHub\cmdcheat\revit_plugin_cheat\Lab1PlaceGroup\obj\x64\Debug\Lab1PlaceGroup.pdb

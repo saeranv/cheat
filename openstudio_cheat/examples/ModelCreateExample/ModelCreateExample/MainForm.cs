@@ -23,7 +23,7 @@ namespace RunManagerExample
             {
               MessageBox.Show("It appears that there was an error accessing the C# SWIG Bindings for OpenStudio. Note that the libraries installed in <installdir>/CSharp/openstudio need to be accessible to this application at runtime, either through the path or in the same directory as the exe. Nothing else will work properly have this point.\n\nError Text: " + e.InnerException.InnerException.Message, "Error loading libraries");
             }
-           
+
             InitializeComponent();
         }
 
@@ -46,15 +46,15 @@ namespace RunManagerExample
           {
             string fname = sfd.FileName;
 
-            OpenStudio.Model model = new OpenStudio.Model();
+            OpenStudio.Model osm = new OpenStudio.osm();
 
-            OpenStudio.Construction construction = new OpenStudio.Construction(model);
+            OpenStudio.Construction construction = new OpenStudio.Construction(osm);
             construction.setName("Construction");
 
             //ASSERT_TRUE(construction.name());
             //EXPECT_EQ("Construction", construction.name().get());
 
-            OpenStudio.Space space = new OpenStudio.Space(model);
+            OpenStudio.Space space = new OpenStudio.Space(osm);
             space.setName("Space");
 
             //ASSERT_TRUE(zone.name());
@@ -67,7 +67,7 @@ namespace RunManagerExample
             points.Add(new OpenStudio.Point3d(1, 0, 0));
             points.Add(new OpenStudio.Point3d(1, 0, 1));
 
-            OpenStudio.Surface roof = new OpenStudio.Surface(points, model); 
+            OpenStudio.Surface roof = new OpenStudio.Surface(points, osm);
             roof.setName("Roof");
             roof.setSpace(space);
             roof.setSurfaceType("Roof");
@@ -78,7 +78,7 @@ namespace RunManagerExample
             //ASSERT_TRUE(roof.construction());
             //EXPECT_EQ(construction.handle(), roof.construction()->handle());
 
-            OpenStudio.Surface wall = new OpenStudio.Surface(points, model);
+            OpenStudio.Surface wall = new OpenStudio.Surface(points, osm);
             wall.setName("Wall");
             wall.setSpace(space);
 
@@ -90,7 +90,7 @@ namespace RunManagerExample
             //ASSERT_TRUE(wall.construction());
             //EXPECT_EQ(construction.handle(), wall.construction()->handle());
 
-            OpenStudio.SubSurface window = new OpenStudio.SubSurface(points, model); 
+            OpenStudio.SubSurface window = new OpenStudio.SubSurface(points, osm);
             window.setName("Window");
             window.setSurface(wall);
             window.setSubSurfaceType("Window");
@@ -101,15 +101,15 @@ namespace RunManagerExample
             //ASSERT_TRUE(window.construction());
             //EXPECT_EQ(construction.handle(), window.construction()->handle());
 
-            OpenStudio.Surface floor = new OpenStudio.Surface(points, model); 
+            OpenStudio.Surface floor = new OpenStudio.Surface(points, osm);
             floor.setName("Floor");
             floor.setSpace(space);
             floor.setSurfaceType("Floor");
             floor.setConstruction(construction);
 
-            if (model.save(new OpenStudio.Path(fname), true))
+            if (osm.save(new OpenStudio.Path(fname), true))
             {
-              MessageBox.Show("Model saved to: " + fname);
+              MessageBox.Show("model saved to: " + fname);
             }
             else
             {
