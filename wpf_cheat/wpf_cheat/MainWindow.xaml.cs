@@ -23,6 +23,7 @@ namespace wpf_cheat
    /// Data-binding = to view/interact with data
    /// elements bound to data in the form of CLR objects and XML
    /// Specifically: establish connection between app UI and program logic
+   /// http://www.wpf-tutorial.com/data-binding/hello-bound-world/
    /// </summary>
    public partial class MainWindow : Window
    {
