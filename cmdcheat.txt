@@ -121,3 +121,6 @@ git remote add origin "remote repo url"
 echo %cd% | clip
 //ADD PYTHON TO PATH
 set PATH=%PATH%;C:\Users\631\AppData\Local\Continuum\anaconda2\pkgs\python-2.7.13-hb034564_12\
+
+//PYTHON INTERPRETOR REPL
+python -i -m UWG.UWG
