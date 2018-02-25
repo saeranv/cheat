@@ -124,3 +124,11 @@ set PATH=%PATH%;C:\Users\631\AppData\Local\Continuum\anaconda2\pkgs\python-2.7.1
 
 //PYTHON INTERPRETOR REPL
 python -i -m UWG.UWG
+
+//PASSING ARGUMENTS TO COMMANDLINE PYTHON
+#In python
+if __name__ == "__main__": print "args", sys.arv[1:]
+#In cmdlin
+python -m UWG.scratch "this is arg2" "this is arg3"
+## arg1 == __name__ in python
+
