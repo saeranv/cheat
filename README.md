@@ -6,6 +6,8 @@
 - echo some-text >> <filename> //make file
 - start sh --login // spawn a new terminal at cd
 - rm -rf <dir> //force delete directory
+- wc "UWG/UWG.py" // line count
+- find -name "*.py"  xargs wc -l //find word count and total of all .py files
 
 ### PIP
 pip freeze //search exiting
