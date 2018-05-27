@@ -5,7 +5,7 @@
 //MAKE/DELETE DIR/FILE
 - echo some-text >> <filename> //make file
 - start sh --login // spawn a new terminal at cd
-- 
+- rm -rf <dir> //force delete directory
 
 ### PIP
 pip freeze //search exiting
