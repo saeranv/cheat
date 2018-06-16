@@ -1,13 +1,46 @@
+
 #cheatsheet for bash in markdwon
 
 ## BASH
+- emacs & // Run process in background as subprocess of terminal
+- (emacs &) // Same but without process as a subprocess
 
-//MAKE/DELETE DIR/FILE
+
+### MAKE/DELETE DIR/FILE
 - echo some-text >> <filename> //make file
 - start sh --login // spawn a new terminal at cd
 - rm -rf <dir> //force delete directory
 - wc "UWG/UWG.py" // line count
-- find -name "*.py"  xargs wc -l //find word count and total of all .py files
+- find -name "(asterik).py"  xargs wc -l //find word count and total of all .py files
+
+### EMACS
+## Navigation
+cn, cp, cf, cb >> navigate screen
+cv, av >> screenful of information
+cg >> kill in-process command
+cxc >> exit emacs
+ck >> kill text (by line)
+cy >> yank text (reinsert)
+a< >> top of page
+a> >> bottom of page
+c/ >> undo
+c-h [query] >> help
+c-h c [cmd key] >> help for specific command
+c-h
+
+## File Management
+cx cs >> save a file
+cx cf >> find a file (or write new file)
+cx cb >> list bufers
+cx cb 1(one) delete all but one buffer window
+cx b >> switch to another buffer ...better then atom :)
+cx s >> save some buffers
+dired >> list files in a directory
+
+## Window
+cx 2 >> split to two windows (top/bottom)
+C-x 4 C-f >> split two windows, open file
+C-x 0 >> move between windows
 
 ### PIP
 pip freeze //search exiting
@@ -29,7 +62,7 @@ set PATH=%PATH%;C:\Users\631\AppData\Local\Continuum\anaconda2\pkgs\python-2.7.1
 ### PASSING ARGUMENTS TO COMMANDLINE PYTHON
 #In python
 ```
-if __name__ == "__main__": 
+if __name__ == "__main__":
 print "args", sys.arv[1:]
 ```
 In cmdlin
@@ -77,9 +110,3 @@ git push origin [name of your new branch]
 ### ADD DIR TO GIT
 go to dir; git init; git add . ; git commit -m "init"; git commit -m "hi"
 git remote add origin "remote repo url"
-
-### ADD DIR TO GIT
-go to dir; git init; git add . ; git commit -m "init"; git commit -m "hi"
-git remote add origin "remote repo url"
-
-
